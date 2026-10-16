@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A" />
+      <stop offset="50%" stop-color="#0D1527" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+    <linearGradient id="bStreamGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5FF" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="bStreamGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F5FF" />
+      <stop offset="60%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+    <filter id="glowBanner" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="1600" height="480" rx="24" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="2" />
+
+  <!-- Grid overlay -->
+  <g stroke="#1E293B" stroke-width="1" stroke-dasharray="8,8" opacity="0.3">
+    <line x1="0" y1="120" x2="1600" y2="120" />
+    <line x1="0" y1="240" x2="1600" y2="240" />
+    <line x1="0" y1="360" x2="1600" y2="360" />
+    <line x1="480" y1="0" x2="480" y2="480" />
+    <line x1="800" y1="0" x2="800" y2="480" />
+    <line x1="1200" y1="0" x2="1200" y2="480" />
+  </g>
+
+  <!-- Left Glyph: Center at (240, 240), Size: 320x320 -->
+  <g transform="translate(80, 80) scale(0.32)">
+    <polygon points="500,120 829,310 829,690 500,880 171,690 171,310" 
+             fill="#0B132B" 
+             stroke="#38BDF8" 
+             stroke-width="14" 
+             stroke-linejoin="round" />
+    <polygon points="500,165 790,332 790,668 500,835 210,668 210,332" 
+             fill="none" 
+             stroke="#00F5FF" 
+             stroke-width="3" 
+             stroke-dasharray="16,16" 
+             opacity="0.4" />
+    <path d="M 270,270 L 730,730" stroke="url(#bStreamGrad1)" stroke-width="56" stroke-linecap="round" fill="none" filter="url(#glowBanner)" />
+    <path d="M 270,270 L 730,730" stroke="#F0F9FF" stroke-width="16" stroke-linecap="round" fill="none" />
+    <path d="M 270,730 L 430,570" stroke="url(#bStreamGrad2)" stroke-width="56" stroke-linecap="round" fill="none" filter="url(#glowBanner)" />
+    <path d="M 270,730 L 430,570" stroke="#F0F9FF" stroke-width="16" stroke-linecap="round" fill="none" />
+    <path d="M 570,430 L 730,270" stroke="url(#bStreamGrad2)" stroke-width="56" stroke-linecap="round" fill="none" filter="url(#glowBanner)" />
+    <path d="M 570,430 L 730,270" stroke="#F0F9FF" stroke-width="16" stroke-linecap="round" fill="none" />
+    <polygon points="500,450 550,500 500,550 450,500" fill="#00F5FF" stroke="#FFFFFF" stroke-width="6" />
+    <polygon points="705,755 765,730 730,670" fill="#38BDF8" />
+    <polygon points="730,330 765,270 705,245" fill="#00F5FF" />
+  </g>
+
+  <!-- Typography -->
+  <!-- Project Title -->
+  <text x="440" y="215" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="94" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">
+    X<tspan fill="url(#textGrad)">Flow</tspan>Lyzer
+  </text>
+
+  <!-- High-Tech Badge/Pill -->
+  <rect x="1080" y="150" width="130" height="34" rx="6" fill="#1E293B" stroke="#00F5FF" stroke-width="1.5" />
+  <text x="1145" y="173" font-family="monospace" font-size="16" font-weight="700" fill="#00F5FF" text-anchor="middle">v1.0.0</text>
+
+  <rect x="1230" y="150" width="160" height="34" rx="6" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5" />
+  <text x="1310" y="173" font-family="monospace" font-size="16" font-weight="700" fill="#38BDF8" text-anchor="middle">eBPF / XDP</text>
+
+  <!-- Tagline / Subtitle -->
+  <text x="445" y="275" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="500" fill="#94A3B8" letter-spacing="0.5">
+    High-Performance, Dual-Stack Stateful Network Telemetry Engine
+  </text>
+
+  <!-- Architecture Spec Badges -->
+  <text x="445" y="335" font-family="monospace" font-size="18" fill="#64748B">
+    <tspan fill="#38BDF8">●</tspan> 100% C-eBPF   <tspan fill="#00F5FF">●</tspan> Lockless SPSC C11   <tspan fill="#818CF8">●</tspan> LRU_PERCPU_HASH   <tspan fill="#34D399">●</tspan> Line-Rate Zero-Copy
+  </text>
+</svg>

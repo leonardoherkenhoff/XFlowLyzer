@@ -1,0 +1,49 @@
+# XFlowLyzer - Git Ignore Policy
+# -----------------------------------------------------------------------------
+
+# Build Artifacts
+build/
+*.o
+*.so
+*.a
+
+# Virtual Environments & Python
+.venv/
+venv*/
+env/
+__pycache__/
+*.pyc
+
+# Telemetry Data & Captures
+flows*.csv
+*.csv
+*.pcap
+*.pcapng
+worker_telemetry/
+
+# Logs & Audit Dumps
+*.log
+*.txt
+!requirements.txt
+
+# Operating System Metadata
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# LaTeX & PDF Artifacts
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.nav
+*.snm
+*.sty
+*.bib
+*.pdf
+
+# Compressed archives
+*.tar.gz
+*.zip
